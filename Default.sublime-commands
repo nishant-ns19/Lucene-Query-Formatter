@@ -1,0 +1,5 @@
+[{
+  "id": "lucenequeryformatter",
+  "caption": "Format Query",
+  "command": "lucene_query_formatter"
+}]
