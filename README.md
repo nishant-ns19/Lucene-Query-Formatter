@@ -28,10 +28,10 @@ QUERY MUST NOT CONTAIN ANY VALIDATION PROBLEM.
 
 Original Query: 
 
-![](/images/before.jpg)
+![](https://github.com/nishant-ns19/Lucene-Query-Formatter/images/before.jpg)
 
 Indented Query:
 
-![](/images/after.jpg)
+![](https://github.com/nishant-ns19/Lucene-Query-Formatter/after.jpg)
 
 NISHANT SINGH
