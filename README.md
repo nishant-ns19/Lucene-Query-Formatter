@@ -10,9 +10,9 @@ to read and debug manually but with this formatter you can prettify your object 
 of queries. This extension can be very handy for engineers working in large organisations with Elastic Search database in JAVA.
 
 ## Key Bindings
-For Mac:  "shift+ctrl+i"
+For Mac:  "cmnd+shift+ctrl+i"
 
-For Non-Mac: "shift+ctrl+i"
+For Non-Mac: "win+shift+win+ctrl+i"
 
             OR
 
