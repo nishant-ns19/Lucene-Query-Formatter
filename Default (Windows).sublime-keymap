@@ -1,3 +1,3 @@
 [
-	{"keys": ["ctrl+shift+i"], "command": "lucene_query_formatter"}
+	{"keys": ["super+ctrl+shift+i"], "command": "lucene_query_formatter"}
 ]
