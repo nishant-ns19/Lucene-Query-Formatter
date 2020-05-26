@@ -12,7 +12,7 @@ of queries. This extension can be very handy for engineers working in large orga
 ## Key Bindings
 For Mac:  "cmnd+shift+ctrl+i"
 
-For Non-Mac: "win+shift+win+ctrl+i"
+For Non-Mac: "win+shift+ctrl+i"
 
             OR
 
