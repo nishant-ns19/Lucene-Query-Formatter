@@ -28,10 +28,10 @@ QUERY MUST NOT CONTAIN ANY VALIDATION PROBLEM.
 
 Original Query: 
 
-![](before.jpg)
+![Preview](before.jpg)
 
 Indented Query:
 
-![](after.jpg)
+![Preview](after.jpg)
 
 NISHANT SINGH
