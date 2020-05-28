@@ -1,6 +1,9 @@
 How to Use:
-1. Open Command Palette , choose "Format Query"
+1. 	Open Command Palette , choose "Format Query"
+
 2.	For MAC->  cmnd+shift+ctrl+i
 	For Non-MAC-> win+shift+ctrl+i
+
+For more information , go to link given below:
 
 Link to package: https://packagecontrol.io/packages/Lucene%20Query%20Formatter

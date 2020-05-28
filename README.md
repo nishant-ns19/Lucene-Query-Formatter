@@ -1,6 +1,6 @@
 ## Query Formatter README
 
-## NOTE:
+## Note:
 ** THIS EXTENSION IS HELPFUL FOR DEBUGGING LOGICAL ERRORS ONLY. **
 
 ## Features
@@ -9,22 +9,19 @@ which can contain thousands of words in case of complex queries due to which it 
 to read and debug manually but with this formatter you can prettify your object and get a better readability
 of queries. This extension can be very handy for engineers working in large organisations with Elastic Search database in JAVA.
 
-## Key Bindings
+## How to use
 For Mac:  "cmnd+shift+ctrl+i"
 
 For Non-Mac: "win+shift+ctrl+i"
 
             OR
 
-For Mac: "shift+cmd+p" -> "Format Query"
-
-For Non-Mac: "shift+ctrl+p" -> "Format Query"
-
+Open Command Palette , choose "Format Query"
 
 ## Requirements
-QUERY MUST NOT CONTAIN ANY VALIDATION PROBLEM.
+QUERY MUST NOT CONTAIN ANY VALIDATION ERROR.
 
-## EXAMPLE
+## Example
 
 Original Query: 
 
