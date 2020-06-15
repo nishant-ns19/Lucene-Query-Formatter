@@ -43,7 +43,7 @@ def remove_multiple_spaces(query, is_quoted):
             continue
 
         if in_phrase:
-            # escaping character
+            # handling escape character
             if query[idx] == '\\' and is_quoted and idx < (len(query)-1):
                 query_new += query[idx+1]
                 idx += 1

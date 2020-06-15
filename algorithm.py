@@ -11,7 +11,7 @@ def format_lucene_query(query):
     # indicates whether the next character has to be escaped or not
     escape_on = False
 
-    # unquote entire query
+    # unquote the query
     if query[0] == '\"' and query[-1] == '\"' and len(query) >= 2:
         is_quoted = True
         query = query[1:-1]
@@ -44,13 +44,13 @@ def format_lucene_query(query):
             # move onto the next line but should not change the current block
             if query[idx] == UTILS.NEW_LINE:
                 result += UTILS.add_newline_tabs(tab_count, False)
-            # escaping character
+            # handling escape characters
             elif query[idx] == '\\' and is_quoted and idx < (len(query)-1):
                 result += query[idx+1]
                 escape_on = True
             continue
 
-        # remove exisiting spacing characters in the string
+        # handling spacing characters in the string
         if UTILS.is_spacing_character(query[idx]):
             if result[-1] == UTILS.TAB or result[-1] == UTILS.NEW_LINE:
                 continue
@@ -58,14 +58,17 @@ def format_lucene_query(query):
                 result += UTILS.add_newline_tabs(tab_count)
             continue
 
-        # add space after colon(:)
-        if query[idx] == ':':
-            result += ": "
+        # handling colon and comma
+        if UTILS.is_comma_or_colon(query[idx]):
+            result += query[idx]
+            result = result + \
+                (' ' if query[idx] ==
+                 ':' else UTILS.add_newline_tabs(tab_count))
             continue
 
+        # add a new block when opening bracket is encountered
         if query[idx] == ',' or UTILS.is_opening(query[idx]):
-            # add a new block when opening bracket is encountered
-            tab_count += int(UTILS.is_opening(query[idx]))
+            tab_count += 1
             result += (query[idx] + UTILS.add_newline_tabs(tab_count))
             continue
 
@@ -74,8 +77,8 @@ def format_lucene_query(query):
             # if the cursor has already moved onto the next line,
             # remove TAB from end as cursor needs to go back to the previous block
             # otherwise, move onto the next line, get onto the previous block
-            result = result[:-1] if len(result) > 1 and result[-1] == UTILS.TAB else "{}{}".format(
-                result, UTILS.add_newline_tabs(tab_count - 1))
+            result = result[:-1] if len(result) > 1 and result[-1] == UTILS.TAB else (
+                result + UTILS.add_newline_tabs(tab_count - 1))
             tab_count = max(tab_count - 1, 0)
             result += query[idx]
 
